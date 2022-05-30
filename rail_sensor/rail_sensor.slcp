@@ -33,15 +33,13 @@ component:
 - instance: [inst0]
   id: rail_util_init
 - {id: restrictions_profile_sun}
-- {id: simple_rail_tx_cli}
 - {id: restrictions_profile_long_range}
 - {id: restrictions_profile_connect}
 - {id: device_init}
-- {id: sl_flex_rail_sleep}
 - {id: restrictions_profile_base}
 - {id: simple_rail_tx}
-- {id: sleeptimer}
 - {id: EFR32FG23B010F512IM48}
+- {id: sleeptimer}
 - {id: rail_util_recommended}
 - {id: restrictions_profile_wisun_ofdm}
 other_file:

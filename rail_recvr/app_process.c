@@ -39,6 +39,7 @@
 #endif
 
 #include "app_log.h"
+#include "sl_sleeptimer.h"
 
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
@@ -94,18 +95,22 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 #endif
 }
 
+static uint8_t count = 0;
 void sl_simple_rail_rx_packet_copied_cbk(const uint8_t* rx_fifo)
 {
   // Eliminate compiler warnings
   (void) rx_fifo;
 
+  ++count;
 
-  /////////////////////////////////////////////////////////////////////////////
-  // Put your application code here, or implement non-weak function!         //
-  /////////////////////////////////////////////////////////////////////////////
-  received = 1;
-  app_log_warning("received packet\r\n");
+  //app_log_warning("received packet: 0x%02x\r\n", *rx_fifo);
 }
+
+void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+{
+  app_log_warning("received packet cnt: %u\r\n", count);
+}
+
 // -----------------------------------------------------------------------------
 //                          Static Function Definitions
 // -----------------------------------------------------------------------------

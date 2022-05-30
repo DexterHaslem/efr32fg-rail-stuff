@@ -32,6 +32,12 @@
 //                                   Includes
 // -----------------------------------------------------------------------------
 #include "sl_rail_util_init.h"
+#include "sl_sleeptimer.h"
+
+void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data);
+sl_sleeptimer_timer_handle_t my_timer;
+uint32_t timer_timeout = 45000;
+
 
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
@@ -64,6 +70,13 @@ RAIL_Handle_t app_init(void)
   // Put your application init code here!                                    //
   // This is called once during start-up.                                    //
   /////////////////////////////////////////////////////////////////////////////
+
+  sl_sleeptimer_start_periodic_timer(&my_timer,
+                                      timer_timeout,
+                                      timer_callback,
+                                      (void *)NULL,
+                                      0,
+                                      0);
 
   return rail_handle;
 }

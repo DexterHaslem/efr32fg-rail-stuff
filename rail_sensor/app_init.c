@@ -33,6 +33,7 @@
 // -----------------------------------------------------------------------------
 #include "sl_rail_util_init.h"
 
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -64,6 +65,10 @@ RAIL_Handle_t app_init(void)
   //RAIL_SetTxPower(rail_handle, RAIL_TX_POWER_LEVEL_HP_MAX);
   //RAIL_Init(railCfg, cb)
  //sl_rail_util_init();
+
+
+
+
   return rail_handle;
 }
 

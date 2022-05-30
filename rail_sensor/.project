@@ -111,19 +111,9 @@
 			<locationURI>STUDIO_SDK_LOC/platform/common/inc/sl_status.h</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.0.2/platform/common/inc/sl_string.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/common/inc/sl_string.h</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.0.2/platform/common/src/sl_slist.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/common/src/sl_slist.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/common/src/sl_string.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/common/src/sl_string.c</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/emlib/inc/em_assert.h</name>
@@ -341,81 +331,6 @@
 			<locationURI>STUDIO_SDK_LOC/platform/radio/rail_lib/common/rail_types.h</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli_arguments.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli_arguments.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli_command.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli_command.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli_input.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli_input.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli_tokenize.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli_tokenize.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/inc/sl_cli_types.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/inc/sl_cli_types.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli_arguments.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli_arguments.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli_command.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli_command.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli_input.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli_input.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli_io.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli_io.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sl_cli_tokenize.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sl_cli_tokenize.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sli_cli_arguments.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sli_cli_arguments.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sli_cli_input.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sli_cli_input.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/cli/src/sli_cli_io.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/cli/src/sli_cli_io.h</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.0.2/platform/service/device_init/inc/sl_device_init_clocks.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/device_init/inc/sl_device_init_clocks.h</locationURI>
@@ -469,31 +384,6 @@
 			<name>gecko_sdk_4.0.2/platform/service/device_init/src/sl_device_init_nvic.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/device_init/src/sl_device_init_nvic.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/hfxo_manager/inc/sl_hfxo_manager.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/hfxo_manager/inc/sl_hfxo_manager.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/hfxo_manager/inc/sli_hfxo_manager.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/hfxo_manager/inc/sli_hfxo_manager.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/hfxo_manager/src/sl_hfxo_manager.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/hfxo_manager/src/sl_hfxo_manager.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/hfxo_manager/src/sl_hfxo_manager_hal_s2.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/hfxo_manager/src/sl_hfxo_manager_hal_s2.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/hfxo_manager/src/sli_hfxo_manager_internal.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/hfxo_manager/src/sli_hfxo_manager_internal.h</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/service/iostream/inc/sl_iostream.h</name>
@@ -554,41 +444,6 @@
 			<name>gecko_sdk_4.0.2/platform/service/mpu/src/sl_mpu.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/mpu/src/sl_mpu.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/inc/sl_power_manager.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/inc/sl_power_manager.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/inc/sl_power_manager_debug.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/inc/sl_power_manager_debug.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/inc/sli_power_manager.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/inc/sli_power_manager.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/src/sl_power_manager.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/src/sl_power_manager.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/src/sl_power_manager_debug.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/src/sl_power_manager_debug.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/src/sl_power_manager_hal_s2.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/src/sl_power_manager_hal_s2.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/platform/service/power_manager/src/sli_power_manager_private.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/service/power_manager/src/sli_power_manager_private.h</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/service/sleeptimer/inc/sl_sleeptimer.h</name>
@@ -669,21 +524,6 @@
 			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_tx/simple_rail_tx.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_tx/simple_rail_tx.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_tx_cli/simple_rail_tx_cli.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_tx_cli/simple_rail_tx_cli.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/sl_flex_rail_sleep/sl_flex_rail_sleep.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/sl_flex_rail_sleep/sl_flex_rail_sleep.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/sl_flex_rail_sleep/sl_flex_rail_sleep.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/sl_flex_rail_sleep/sl_flex_rail_sleep.h</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_acmp.h</name>
