@@ -90,6 +90,15 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 #endif
 }
 
+void sl_simple_rail_rx_packet_copied_cbk(const uint8_t* rx_fifo)
+{
+  // Eliminate compiler warnings
+  (void) rx_fifo;
+
+  /////////////////////////////////////////////////////////////////////////////
+  // Put your application code here, or implement non-weak function!         //
+  /////////////////////////////////////////////////////////////////////////////
+}
 // -----------------------------------------------------------------------------
 //                          Static Function Definitions
 // -----------------------------------------------------------------------------

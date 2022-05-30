@@ -241,16 +241,6 @@
 			<locationURI>STUDIO_SDK_LOC/util/third_party/printf/printf.h</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.0.2/app/common/util/app_assert/app_assert.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_assert/app_assert.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/common/util/app_assert/sl_app_assert.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/common/util/app_assert/sl_app_assert.h</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.0.2/app/common/util/app_log/app_log.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/common/util/app_log/app_log.c</locationURI>
@@ -464,16 +454,6 @@
 			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_rx/simple_rail_rx.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_rx/simple_rail_rx.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_tx/simple_rail_tx.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_tx/simple_rail_tx.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_tx/simple_rail_tx.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_tx/simple_rail_tx.h</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_acmp.h</name>

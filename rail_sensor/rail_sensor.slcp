@@ -27,7 +27,6 @@ component:
 - {id: brd2600a_a01}
 - {id: radio_config_simple_rail_singlephy}
 - {id: sl_system}
-- {id: simple_rail_rx}
 - {id: mpu}
 - {id: restrictions_profile_wisun}
 - instance: [inst0]
