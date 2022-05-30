@@ -38,6 +38,10 @@
 #include "app_task_init.h"
 #endif
 
+#include "simple_rail_tx.h"
+
+#include "app_log.h"
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -53,7 +57,8 @@
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
-
+static uint8_t tx_buf[16];
+static uint8_t sent = 0;
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
@@ -64,13 +69,22 @@ void app_process_action(RAIL_Handle_t rail_handle)
 {
   (void) rail_handle;
 
+  // its aborted
+//  uint32_t v = 0x4000000;
+//  uint32_t tb = (v & RAIL_EVENT_TX_BLOCKED) != 0;
+//  uint32_t ta = (v & RAIL_EVENT_TX_ABORTED) != 0;
+////
+//  app_log_warning("aborted = %x, blocked = %x\r\n", ta, tb);
+
   ///////////////////////////////////////////////////////////////////////////
   // Put your application code here!                                       //
   // This is called infinitely.                                            //
   // Do not call blocking functions from here!                             //
   ///////////////////////////////////////////////////////////////////////////
-
-
+// if (!sent) {
+//  sl_simple_rail_tx_transmit(tx_buf, 16);
+//  sent = 1 ;
+// }
 }
 
 /******************************************************************************

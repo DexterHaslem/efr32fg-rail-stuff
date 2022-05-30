@@ -38,6 +38,8 @@
 #include "app_task_init.h"
 #endif
 
+#include "app_log.h"
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -69,8 +71,10 @@ void app_process_action(RAIL_Handle_t rail_handle)
   // This is called infinitely.                                            //
   // Do not call blocking functions from here!                             //
   ///////////////////////////////////////////////////////////////////////////
+  ///
 }
 
+static volatile uint8_t received = 0;
 /******************************************************************************
  * RAIL callback, called if a RAIL event occurs
  *****************************************************************************/
@@ -95,9 +99,12 @@ void sl_simple_rail_rx_packet_copied_cbk(const uint8_t* rx_fifo)
   // Eliminate compiler warnings
   (void) rx_fifo;
 
+
   /////////////////////////////////////////////////////////////////////////////
   // Put your application code here, or implement non-weak function!         //
   /////////////////////////////////////////////////////////////////////////////
+  received = 1;
+  app_log_warning("received packet\r\n");
 }
 // -----------------------------------------------------------------------------
 //                          Static Function Definitions

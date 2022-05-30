@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file
- * @brief app_init.c
+ * @brief simple_rail_heartbeat_config.h
  *******************************************************************************
  * # License
  * <b>Copyright 2018 Silicon Laboratories Inc. www.silabs.com</b>
@@ -27,46 +27,34 @@
  * 3. This notice may not be removed or altered from any source distribution.
  *
  ******************************************************************************/
+#ifndef SIMPLE_RAIL_HEARTBEAT_CONFIG_H
+#define SIMPLE_RAIL_HEARTBEAT_CONFIG_H
 
+// <<< Use Configuration Wizard in Context Menu >>>
 // -----------------------------------------------------------------------------
 //                                   Includes
 // -----------------------------------------------------------------------------
-#include "sl_rail_util_init.h"
 
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
+// <o SIMPLE_RAIL_HEARTBEAT_TIME_PERIOD_MS> Simple RAIL Heartbeat Time Period [ms] <0-4294967295>
+// <i> Default: 1000
+// <i> Define the heartbeat period [ms].
+#define SIMPLE_RAIL_HEARTBEAT_TIME_PERIOD_MS     15000
 
-// -----------------------------------------------------------------------------
-//                          Static Function Declarations
-// -----------------------------------------------------------------------------
+// <o SIMPLE_RAIL_HEARTBEAT_TIMER_PRIORITY> Simple RAIL Heartbeat Timer priority <0-255>
+// <i> Default: 10
+// <i> Define the heartbeat timer priority (0 = highest priority).
+#define SIMPLE_RAIL_HEARTBEAT_TIMER_PRIORITY     11
 
 // -----------------------------------------------------------------------------
 //                                Global Variables
 // -----------------------------------------------------------------------------
 
 // -----------------------------------------------------------------------------
-//                                Static Variables
+//                          Public Function Declarations
 // -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-//                          Public Function Definitions
-// -----------------------------------------------------------------------------
-/******************************************************************************
- * The function is used for some basic initialization related to the app.
- *****************************************************************************/
-RAIL_Handle_t app_init(void)
-{
-  // Get RAIL handle, used later by the application
-  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
-
-
-  //RAIL_SetTxPower(rail_handle, RAIL_TX_POWER_LEVEL_HP_MAX);
-  //RAIL_Init(railCfg, cb)
- //sl_rail_util_init();
-  return rail_handle;
-}
-
-// -----------------------------------------------------------------------------
-//                          Static Function Definitions
-// -----------------------------------------------------------------------------
+// <<< end of configuration section >>>
+#endif  // SIMPLE_RAIL_HEARTBEAT_CONFIG_H

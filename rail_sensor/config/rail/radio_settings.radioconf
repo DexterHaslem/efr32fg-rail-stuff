@@ -42,7 +42,7 @@
         <channel_config_entry name="Channel Group 1">
           <physical_channel_offset>SAME_AS_FIRST_CHANNEL</physical_channel_offset>
           <channel_number_start>0</channel_number_start>
-          <channel_number_end>20</channel_number_end>
+          <channel_number_end>0</channel_number_end>
           <max_power>RAIL_TX_POWER_MAX</max_power>
           <metadata>{&quot;customChannel&quot;:false,&quot;errors&quot;:{},&quot;warnings&quot;:{},&quot;disabledGizmos&quot;:{}}</metadata>
         </channel_config_entry>
