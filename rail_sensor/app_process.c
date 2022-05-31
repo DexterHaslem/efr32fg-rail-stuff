@@ -11,11 +11,11 @@
 static uint8_t ready_send = 0;
 
 #define PAYLOAD_LENGTH (16)
-static const uint8_t payload[PAYLOAD_LENGTH];
+static const uint8_t payload[PAYLOAD_LENGTH] = {0,0,0,0,0,0,0,0};
+static uint32_t *count = (uint32_t *)&payload[0];
 
 void app_process_action(RAIL_Handle_t rail_handle)
 {
-
 	(void) rail_handle;
 
 	if (ready_send && rail_handle)
@@ -23,9 +23,11 @@ void app_process_action(RAIL_Handle_t rail_handle)
 		RAIL_RadioState_t cur_state = RAIL_GetRadioState(rail_handle);
 		if (cur_state == RAIL_RF_STATE_IDLE || cur_state == RAIL_RF_STATE_ACTIVE)
 		{
-
+			++count;
+			// update tx fifo regs to beginning of our payload again
+			// if we dont do this we will get underflows
 			uint16_t fifo_ret = RAIL_SetTxFifo(rail_handle, payload,
-			PAYLOAD_LENGTH, PAYLOAD_LENGTH);
+					PAYLOAD_LENGTH, PAYLOAD_LENGTH);
 			if (fifo_ret == 0)
 			{
 				app_log_error("failed to write tx fifo\r\n");
@@ -61,11 +63,11 @@ void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
  *****************************************************************************/
 void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 {
-	app_log_warning("tx Events: %lx\r\n", events);
-	if ((events & RAIL_EVENT_TX_STARTED) != 0)
-	{
-		app_log_warning("got tx started\r\n");
-	}
+	//app_log_warning("tx Events: %lx\r\n", events);
+//	if ((events & RAIL_EVENT_TX_STARTED) != 0)
+//	{
+//		app_log_warning("got tx started\r\n");
+//	}
 	if ((events & RAIL_EVENT_TX_ABORTED) != 0)
 	{
 		app_log_warning("got tx abort\r\n");

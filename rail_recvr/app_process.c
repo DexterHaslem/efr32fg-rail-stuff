@@ -28,7 +28,7 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   app_task_notify();
 #endif
-	app_log_warning("rx Events: %lx\r\n", events);
+	//app_log_warning("rx Events: %lx\r\n", events);
 
 	if (events & RAIL_EVENTS_RX_COMPLETION)
 	{
