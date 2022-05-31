@@ -41,34 +41,12 @@
 
 #include "app_log.h"
 #include "common.h"
-#include "simple_rail_tx.h"
-// -----------------------------------------------------------------------------
-//                              Macros and Typedefs
-// -----------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------
-//                          Static Function Declarations
-// -----------------------------------------------------------------------------
-
-// -----------------------------------------------------------------------------
-//                                Global Variables
-// -----------------------------------------------------------------------------
-
-// -----------------------------------------------------------------------------
-//                                Static Variables
-// -----------------------------------------------------------------------------
-//static uint8_t tx_buf[16];
-//static uint8_t sent = 0;
 static const uint8_t payload[PAYLOAD_LENGTH] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
-//uint8_t txBuffer[BUFFER_LENGTH];
+uint8_t txBuffer[BUFFER_LENGTH];
 static uint8_t ready_send = 0;
 
-// -----------------------------------------------------------------------------
-//                          Public Function Definitions
-// -----------------------------------------------------------------------------
-/******************************************************************************
- * Application state machine, called infinitely
- *****************************************************************************/
+
 void app_process_action(RAIL_Handle_t rail_handle)
 {
   (void) rail_handle;
@@ -95,15 +73,16 @@ void app_process_action(RAIL_Handle_t rail_handle)
       //if (status != SL_STATUS_OK){
       //    app_log_error("failed to tx\r\n");
       //}
-//      RAIL_Status_t status;
-//      status = RAIL_WriteTxFifo(rail_handle, payload, PAYLOAD_LENGTH, false);
-//      if (status != RAIL_STATUS_NO_ERROR) {
-//          app_log_error("failed to write tx fifo\r\n");
-//      }
-//      status = RAIL_StartTx(rail_handle, 0, RAIL_TX_OPTIONS_DEFAULT, NULL);
-//      if (status != RAIL_STATUS_NO_ERROR) {
-//          app_log_error("failed to RAIL_StartTx\r\n");
-//      }
+
+      //status = RAIL_SetTxFifo(rail_handle, payload, PAYLOAD_LENGTH, false);
+      RAIL_Status_t status =  RAIL_SetTxFifo(rail_handle, txBuffer, 0, BUFFER_LENGTH);
+      if (status != RAIL_STATUS_NO_ERROR) {
+          app_log_error("failed to write tx fifo\r\n");
+      }
+      status = RAIL_StartTx(rail_handle, 0, RAIL_TX_OPTIONS_DEFAULT, NULL);
+      if (status != RAIL_STATUS_NO_ERROR) {
+          app_log_error("failed to RAIL_StartTx\r\n");
+      }
       ready_send = 0;
   }
 }
@@ -123,6 +102,10 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 {
   (void) rail_handle;
   (void) events;
+
+  //if (events & RAIL_EVENTS_TX_COMPLETION != 0) {
+    app_log_warning("sl_rail_util_on_event: completion event %02x\r\n", events);
+  //}
 
   ///////////////////////////////////////////////////////////////////////////
   // Put your RAIL event handling here!                                    //

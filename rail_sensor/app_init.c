@@ -55,7 +55,7 @@ uint32_t timer_timeout = 55000;
 //                                Static Variables
 // -----------------------------------------------------------------------------
 
-//extern uint8_t txBuffer[BUFFER_LENGTH];
+//extern
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
@@ -66,7 +66,7 @@ RAIL_Handle_t app_init(void)
 {
   // Get RAIL handle, used later by the application
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
-//  RAIL_Status_t status =  RAIL_SetTxFifo(rail_handle, txBuffer, 0, BUFFER_LENGTH);
+  //RAIL_Status_t status =  RAIL_SetTxFifo(rail_handle, txBuffer, 0, BUFFER_LENGTH);
 //  if (status != RAIL_STATUS_NO_ERROR) {
 //      while (1) {}
 //  }

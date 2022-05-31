@@ -28,7 +28,6 @@ component:
 - {id: app_log}
 - {id: radio_config_simple_rail_singlephy}
 - {id: sl_system}
-- {id: simple_rail_heartbeat}
 - {id: mpu}
 - {id: restrictions_profile_wisun}
 - instance: [inst0]
@@ -39,7 +38,6 @@ component:
 - {id: device_init}
 - {id: sl_flex_rail_sleep}
 - {id: restrictions_profile_base}
-- {id: simple_rail_tx}
 - instance: [vcom]
   id: iostream_eusart
 - {id: EFR32FG23B010F512IM48}
