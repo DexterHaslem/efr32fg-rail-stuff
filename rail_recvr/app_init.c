@@ -18,7 +18,7 @@ RAIL_Handle_t app_init(void)
                                       0);
 
   // done in config ui
-  //  RAIL_ConfigEvents(rail_handle, RAIL_EVENTS_ALL,
+  RAIL_ConfigEvents(rail_handle, RAIL_EVENTS_ALL, RAIL_EVENTS_ALL);
   //                       RAIL_EVENTS_TX_COMPLETION | RAIL_EVENTS_RX_COMPLETION);
 
   RAIL_Status_t status = RAIL_StartRx(rail_handle, 0, NULL);

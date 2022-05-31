@@ -36,7 +36,6 @@ component:
 - {id: restrictions_profile_long_range}
 - {id: restrictions_profile_connect}
 - {id: device_init}
-- {id: sl_flex_rail_sleep}
 - {id: restrictions_profile_base}
 - instance: [vcom]
   id: iostream_eusart
