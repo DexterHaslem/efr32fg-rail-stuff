@@ -7,24 +7,20 @@ uint32_t timer_timeout = 65000;
 
 RAIL_Handle_t app_init(void)
 {
-  // Get RAIL handle, used later by the application
-  RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
+	// Get RAIL handle, used later by the application
+	RAIL_Handle_t rail_handle = sl_rail_util_get_handle(
+			SL_RAIL_UTIL_HANDLE_INST0);
 
-  sl_sleeptimer_start_periodic_timer(&my_timer,
-                                      timer_timeout,
-                                      timer_callback,
-                                      (void *)NULL,
-                                      0,
-                                      0);
+	sl_sleeptimer_start_periodic_timer(&my_timer, timer_timeout, timer_callback,
+			(void*) NULL, 0, 0);
 
-  // done in config ui
-  RAIL_ConfigEvents(rail_handle, RAIL_EVENTS_ALL, RAIL_EVENTS_ALL);
-  //                       RAIL_EVENTS_TX_COMPLETION | RAIL_EVENTS_RX_COMPLETION);
+	RAIL_Status_t status = RAIL_StartRx(rail_handle, 0, NULL);
+	if (status != RAIL_STATUS_NO_ERROR)
+	{
+		while (1)
+		{
+		}
+	}
 
-  RAIL_Status_t status = RAIL_StartRx(rail_handle, 0, NULL);
-  if ( status != RAIL_STATUS_NO_ERROR ){
-    while (1) {}
-  }
-
-  return rail_handle;
+	return rail_handle;
 }
