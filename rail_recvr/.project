@@ -251,16 +251,6 @@
 			<locationURI>STUDIO_SDK_LOC/platform/peripheral/src/peripheral_sysrtc.c</locationURI>
 		</link>
 		<link>
-			<name>gecko_sdk_4.0.2/util/third_party/printf/printf.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/util/third_party/printf/printf.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/util/third_party/printf/printf.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/util/third_party/printf/printf.h</locationURI>
-		</link>
-		<link>
 			<name>gecko_sdk_4.0.2/app/common/util/app_log/app_log.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/app/common/util/app_log/app_log.c</locationURI>
@@ -484,26 +474,6 @@
 			<name>gecko_sdk_4.0.2/platform/service/system/src/sl_system_process_action.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/system/src/sl_system_process_action.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/util/third_party/printf/inc/iostream_printf.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/util/third_party/printf/inc/iostream_printf.h</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/util/third_party/printf/src/iostream_printf.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/util/third_party/printf/src/iostream_printf.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_rx/simple_rail_rx.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_rx/simple_rail_rx.c</locationURI>
-		</link>
-		<link>
-			<name>gecko_sdk_4.0.2/app/flex/component/rail/simple_rail_rx/simple_rail_rx.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/app/flex/component/rail/simple_rail_rx/simple_rail_rx.h</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.0.2/platform/Device/SiliconLabs/EFR32FG23/Include/efr32fg23_acmp.h</name>

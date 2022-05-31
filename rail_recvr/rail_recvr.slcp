@@ -25,9 +25,9 @@ toolchain_settings:
 component:
 - {id: restrictions_profile_wisun_fsk}
 - {id: brd2600a_a01}
+- {id: app_log}
 - {id: radio_config_simple_rail_singlephy}
 - {id: sl_system}
-- {id: simple_rail_rx}
 - {id: mpu}
 - {id: restrictions_profile_wisun}
 - instance: [inst0]
@@ -37,6 +37,8 @@ component:
 - {id: restrictions_profile_connect}
 - {id: device_init}
 - {id: restrictions_profile_base}
+- instance: [vcom]
+  id: iostream_eusart
 - {id: EFR32FG23B010F512IM48}
 - {id: sleeptimer}
 - {id: rail_util_recommended}

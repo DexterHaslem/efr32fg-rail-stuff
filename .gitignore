@@ -10,3 +10,6 @@ GNU ARM v10.2.1 - Default/
 **/autogen/
 *.pdm
 .uceditor/
+
+rail_scratch/
+
