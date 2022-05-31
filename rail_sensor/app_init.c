@@ -32,7 +32,12 @@
 //                                   Includes
 // -----------------------------------------------------------------------------
 #include "sl_rail_util_init.h"
+#include "sl_sleeptimer.h"
+#include "common.h"
+#include "rail.h"
 
+sl_sleeptimer_timer_handle_t my_timer;
+uint32_t timer_timeout = 55000;
 
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
@@ -50,6 +55,7 @@
 //                                Static Variables
 // -----------------------------------------------------------------------------
 
+//extern uint8_t txBuffer[BUFFER_LENGTH];
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
@@ -60,13 +66,16 @@ RAIL_Handle_t app_init(void)
 {
   // Get RAIL handle, used later by the application
   RAIL_Handle_t rail_handle = sl_rail_util_get_handle(SL_RAIL_UTIL_HANDLE_INST0);
-
-
-  //RAIL_SetTxPower(rail_handle, RAIL_TX_POWER_LEVEL_HP_MAX);
-  //RAIL_Init(railCfg, cb)
- //sl_rail_util_init();
-
-
+//  RAIL_Status_t status =  RAIL_SetTxFifo(rail_handle, txBuffer, 0, BUFFER_LENGTH);
+//  if (status != RAIL_STATUS_NO_ERROR) {
+//      while (1) {}
+//  }
+  sl_sleeptimer_start_periodic_timer(&my_timer,
+                                      timer_timeout,
+                                      timer_callback,
+                                      (void *)NULL,
+                                      0,
+                                      0);
 
 
   return rail_handle;

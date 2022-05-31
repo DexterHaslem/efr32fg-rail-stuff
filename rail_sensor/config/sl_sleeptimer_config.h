@@ -57,7 +57,7 @@
 
 // <o SL_SLEEPTIMER_FREQ_DIVIDER> Timer frequency divider
 // <i> Default: 1
-#define SL_SLEEPTIMER_FREQ_DIVIDER  1
+#define SL_SLEEPTIMER_FREQ_DIVIDER  32
 
 // <q SL_SLEEPTIMER_PRORTC_HAL_OWNS_IRQ_HANDLER> If Radio internal RTC (PRORTC) HAL is used, determines if it owns the IRQ handler. Enable, if no wireless stack is used.
 // <i> Default: 0

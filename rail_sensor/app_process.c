@@ -38,10 +38,10 @@
 #include "app_task_init.h"
 #endif
 
-#include "simple_rail_tx.h"
 
 #include "app_log.h"
-
+#include "common.h"
+#include "simple_rail_tx.h"
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -57,8 +57,12 @@
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
-static uint8_t tx_buf[16];
-static uint8_t sent = 0;
+//static uint8_t tx_buf[16];
+//static uint8_t sent = 0;
+static const uint8_t payload[PAYLOAD_LENGTH] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
+//uint8_t txBuffer[BUFFER_LENGTH];
+static uint8_t ready_send = 0;
+
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
@@ -85,6 +89,31 @@ void app_process_action(RAIL_Handle_t rail_handle)
 //  sl_simple_rail_tx_transmit(tx_buf, 16);
 //  sent = 1 ;
 // }
+  if (ready_send && rail_handle)
+  {
+      //sl_status_t status = sl_simple_rail_tx_transmit(payload, 1);
+      //if (status != SL_STATUS_OK){
+      //    app_log_error("failed to tx\r\n");
+      //}
+//      RAIL_Status_t status;
+//      status = RAIL_WriteTxFifo(rail_handle, payload, PAYLOAD_LENGTH, false);
+//      if (status != RAIL_STATUS_NO_ERROR) {
+//          app_log_error("failed to write tx fifo\r\n");
+//      }
+//      status = RAIL_StartTx(rail_handle, 0, RAIL_TX_OPTIONS_DEFAULT, NULL);
+//      if (status != RAIL_STATUS_NO_ERROR) {
+//          app_log_error("failed to RAIL_StartTx\r\n");
+//      }
+      ready_send = 0;
+  }
+}
+
+
+void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+{
+  app_log_warning("timer fired \r\n");
+  ready_send = 1;
+
 }
 
 /******************************************************************************

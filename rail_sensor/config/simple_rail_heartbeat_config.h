@@ -41,7 +41,7 @@
 // <o SIMPLE_RAIL_HEARTBEAT_TIME_PERIOD_MS> Simple RAIL Heartbeat Time Period [ms] <0-4294967295>
 // <i> Default: 1000
 // <i> Define the heartbeat period [ms].
-#define SIMPLE_RAIL_HEARTBEAT_TIME_PERIOD_MS     (1000)
+#define SIMPLE_RAIL_HEARTBEAT_TIME_PERIOD_MS     4000
 
 // <o SIMPLE_RAIL_HEARTBEAT_TIMER_PRIORITY> Simple RAIL Heartbeat Timer priority <0-255>
 // <i> Default: 10

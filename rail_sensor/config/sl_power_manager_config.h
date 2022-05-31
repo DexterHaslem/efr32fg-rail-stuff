@@ -51,7 +51,7 @@
 // <i> Enable or disable voltage scaling in EM2/3 modes (when available). This decreases wakeup time by about 30 us.
 // <i> Deprecated. It is replaced by the function sl_power_manager_em23_voltage_scaling_enable_fast_wakeup()
 // <i> Default: 0
-#define SL_POWER_MANAGER_CONFIG_VOLTAGE_SCALING_FAST_WAKEUP   0
+#define SL_POWER_MANAGER_CONFIG_VOLTAGE_SCALING_FAST_WAKEUP   1
 
 // <e SL_POWER_MANAGER_DEBUG> Enable debugging feature
 // <i> Enable or disable debugging features (trace the different modules that have requirements).
