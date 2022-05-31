@@ -29,14 +29,14 @@
         </input>
         <input>
           <key>LONGRANGE_MODE</key>
-          <value>serializableObject:EnumDataItem:4</value>
+          <value>serializableObject:EnumDataItem:2</value>
         </input>
         <input>
           <key>XTAL_FREQUENCY_HZ</key>
           <value>int:39000000</value>
         </input>
       </profile_inputs>
-      <phy name="serializableObject:Efr32RadioConfiguratorPhy:OCELOT:Long_Range:PHY_Longrange_915M_OQPSK_DSSS8_19p2kbps"/>
+      <phy name="serializableObject:Efr32RadioConfiguratorPhy:OCELOT:Long_Range:PHY_Longrange_915M_OQPSK_DSSS8_4p8kbps"/>
       <metadata>{&quot;errors&quot;:{},&quot;warnings&quot;:{},&quot;disabledGizmos&quot;:{&quot;frame_type_2_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_2_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_2_length&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_3_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_3_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_3_length&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_4_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_4_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_4_length&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_5_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_5_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_5_length&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_6_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_6_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_6_length&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_7_valid&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_7_filter&quot;:{&quot;frame_type_bits&quot;:true},&quot;frame_type_7_length&quot;:{&quot;frame_type_bits&quot;:true}}}</metadata>
       <channel_config_entries>
         <channel_config_entry name="Channel Group 1">
