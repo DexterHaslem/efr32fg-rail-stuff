@@ -53,7 +53,7 @@ void app_process_action(RAIL_Handle_t rail_handle)
 
 void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
 {
-	app_log_warning("timer fired \r\n");
+	//app_log_warning("timer fired \r\n");
 	ready_send = 1;
 
 }
@@ -72,10 +72,10 @@ void sl_rail_util_on_event(RAIL_Handle_t rail_handle, RAIL_Events_t events)
 	{
 		app_log_warning("got tx abort\r\n");
 	}
-	if ((events & RAIL_EVENT_TX_PACKET_SENT) != 0)
-	{
-		app_log_warning("packet sent\r\n");
-	}
+//	if ((events & RAIL_EVENT_TX_PACKET_SENT) != 0)
+//	{
+//		app_log_warning("packet sent\r\n");
+//	}
 
 	if ((events & RAIL_EVENT_TX_BLOCKED) != 0)
 	{
