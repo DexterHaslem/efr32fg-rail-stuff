@@ -11,8 +11,8 @@
 static uint8_t ready_send = 0;
 
 #define PAYLOAD_LENGTH (16)
-static const uint8_t payload[PAYLOAD_LENGTH] = {0,0,0,0,0,0,0,0};
-static uint32_t *count = (uint32_t *)&payload[0];
+static uint8_t payload[PAYLOAD_LENGTH] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+static uint32_t *count = ((uint32_t *)&payload[0]);
 
 void app_process_action(RAIL_Handle_t rail_handle)
 {
@@ -23,7 +23,7 @@ void app_process_action(RAIL_Handle_t rail_handle)
 		RAIL_RadioState_t cur_state = RAIL_GetRadioState(rail_handle);
 		if (cur_state == RAIL_RF_STATE_IDLE || cur_state == RAIL_RF_STATE_ACTIVE)
 		{
-			++count;
+			(*count)++;
 			// update tx fifo regs to beginning of our payload again
 			// if we dont do this we will get underflows
 			uint16_t fifo_ret = RAIL_SetTxFifo(rail_handle, payload,
