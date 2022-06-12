@@ -6,7 +6,6 @@
 #endif
 
 #include "app_log.h"
-#include "common.h"
 
 static uint8_t ready_send = 0;
 
@@ -51,12 +50,12 @@ void app_process_action(RAIL_Handle_t rail_handle)
 	}
 }
 
-void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
-{
-	//app_log_warning("timer fired \r\n");
-	ready_send = 1;
+//void timer_callback(sl_sleeptimer_timer_handle_t *handle, void *data)
+//{
+//	//app_log_warning("timer fired \r\n");
+//	ready_send = 1;
+//}
 
-}
 
 /******************************************************************************
  * RAIL callback, called if a RAIL event occurs
