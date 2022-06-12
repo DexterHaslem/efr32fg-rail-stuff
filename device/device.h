@@ -5,9 +5,9 @@
  *      Author: dexter
  */
 
-#ifndef RECEIVER_H_
-#define RECEIVER_H_
+#ifndef DEVICE_H_
+#define DEVICE_H_
 
 
 
-#endif /* RECEIVER_H_ */
+#endif /* DEVICE_H_ */
